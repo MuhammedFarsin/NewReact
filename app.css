@@ -1,50 +1,130 @@
-.header{
-    display: flex;
-    height: 120px;
-    justify-content: space-between;
-    border: 2px solid;
+.header {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  border: 2px solid;
 }
 .logo {
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 120px;
 }
-.nav-bar >ul {
-    display: flex;
-    font-size: 17px;
-    list-style-type: none;
+.nav-bar > ul {
+  display: flex;
+  font-size: 17px;
+  list-style-type: none;
 }
 .nav-bar > ul > li {
-    padding: 10px;
-    margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 .food-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+.filer {
+  display: flex;
 }
 .food-card {
-    width: 180px;
-    margin: 10px;
-    padding: 5.5px;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: box-shadow 0.5s ease;
+  width: 180px;
+  margin: 10px;
+  padding: 5.5px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.5s ease;
+  border-radius: 10px;
 }
 .food-card:hover {
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid black;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
 }
 .filer-btn {
-    margin: 10px;
-    cursor: pointer;
+  margin: 10px;
+  cursor: pointer;
 }
 .food-logo {
-    width: 180px;
+  width: 180px;
 }
 .review {
-    border: 1px solid #f0f0f0;
-    width: 50px;
-    padding: 3px;
-    background-color: greenyellow;
+  border: 1px solid #f0f0f0;
+  width: 50px;
+  padding: 3px;
+  background-color: greenyellow;
+}
+.loading-spinner {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid orange;
+  border-radius: 50%;
+  width: 30px; /* Adjusted size for a smaller spinner */
+  height: 30px; /* Adjusted size for a smaller spinner */
+  animation: spin 1s linear infinite; /* Adjusted speed for faster rotation */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+.shimmer-card {
+  width: 180px;
+  height: 380px;
+  margin: 10px;
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 1200px 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 10px; /* Add rounded corners for a more modern look */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+.login-btn {
+  height: 30px;
+  width: 70px;
+  margin-top: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: orange;
+  border: orange;
+  border-radius: 10px;
+}
+.filter-btn {
+  height: 25px;
+  margin-top: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: orange;
+  border: orange;
+  border-radius: 10px;
+}
+.search-box {
+  height: 20px;
+  background-color: #f0f0f0;
+  border: solid 1px orange;
+  border-radius: 10px;
+}
+.empty-state {
+  margin-left: 40%;
+}
+.empty-note {
+  color: orange;
+  padding-left:33px;
 }
